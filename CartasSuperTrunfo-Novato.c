@@ -1,10 +1,9 @@
-#include <stdio.h> // Biblioteca padrão para entrada e saída (scanf, printf)
+#include <stdio.h> 
 
-// Desafio Super Trunfo - Países - Nível Novato Simplificado
-// Cadastro e exibição de DUAS cartas, sem loops ou condicionais.
+// Desafio Super Trunfo - Países - Nível Novato
 
 int main() {
-    // --- Variáveis para a CARTA 1 ---
+    // --- Variáveis para a carta 1 ---
     char estado1_char;           // Letra do estado
     char codigo_carta1[5];       // Código da carta (ex: A01)
     char nome_cidade1[50];       // Nome da cidade
@@ -13,7 +12,7 @@ int main() {
     float pib1;                  // PIB
     int pontos_turisticos1;      // Número de pontos turísticos
 
-    // --- Variáveis para a CARTA 2 ---
+    // --- Variáveis para a carta 2 ---
     char estado2_char;
     char codigo_carta2[5];
     char nome_cidade2[50];
@@ -32,21 +31,21 @@ int main() {
     printf("\n--- Cadastro da CARTA 1 ---\n");
 
     printf("Digite a letra do estado da cidade (de A a H): ");
-    scanf(" %c", &estado1_char); // Espaço antes de %c para ignorar o 'Enter' anterior
+    scanf(" %c", &estado1_char);
 
     printf("Digite o código da carta (ex: A01): ");
-    scanf(" %s", codigo_carta1); // Espaço antes de %s para ignorar o 'Enter' anterior
+    scanf(" %s", codigo_carta1); 
 
-    printf("Digite o nome da cidade (use '_' para espacos, ex: Rio_de_Janeiro): ");
-    scanf(" %s", nome_cidade1); // Espaço antes de %s para ignorar o 'Enter' anterior
+    printf("Digite o nome da cidade: ");
+    scanf(" %s", nome_cidade1); 
 
-    printf("Digite a população (somente números): ");
+    printf("Digite a população: ");
     scanf("%d", &populacao1);
 
-    printf("Digite a área em KM² (ex: 123.45): ");
+    printf("Digite a área em KM²: ");
     scanf("%f", &area1);
 
-    printf("Digite o PIB em Bilhões (somente números, ex: 300.50): ");
+    printf("Digite o PIB em Bilhões: ");
     scanf("%f", &pib1);
 
     printf("Digite o número de pontos turísticos: ");
@@ -56,47 +55,47 @@ int main() {
     printf("\n--- Cadastro da CARTA 2 ---\n");
 
     printf("Digite a letra do estado da cidade (de A a H): ");
-    scanf(" %c", &estado2_char); // Importante: usar espaço antes do %c
+    scanf(" %c", &estado2_char); 
 
     printf("Digite o código da carta (ex: B02): ");
-    scanf(" %s", codigo_carta2); // Importante: usar espaço antes do %s
+    scanf(" %s", codigo_carta2); 
 
-    printf("Digite o nome da cidade (use '_' para espacos, ex: Sao_Paulo): ");
-    scanf(" %s", nome_cidade2); // Importante: usar espaço antes do %s
+    printf("Digite o nome da cidade: ");
+    scanf(" %s", nome_cidade2); 
 
-    printf("Digite a população (somente números): ");
+    printf("Digite a população: ");
     scanf("%d", &populacao2);
 
-    printf("Digite a área em KM² (ex: 1521.11): ");
+    printf("Digite a área em KM²: ");
     scanf("%f", &area2);
 
-    printf("Digite o PIB em Bilhões (somente números, ex: 699.28): ");
+    printf("Digite o PIB em Bilhões: ");
     scanf("%f", &pib2);
 
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &pontos_turisticos2);
 
-    // --- EXIBIÇÃO DA CARTA 1 ---
+    // --- CARTA 1 ---
     printf("\n--- Dados da CARTA 1 ---\n");
     printf("Estado: %c\n", estado1_char);
     printf("Código: %s\n", codigo_carta1);
     printf("Nome da Cidade: %s\n", nome_cidade1);
     printf("População: %d\n", populacao1);
     printf("Área: %.2f km²\n", area1);
-    printf("PIB: %.2f Bilhoes de unidades monetarias\n", pib1);
+    printf("PIB: %.2f Bilhoes R$\n", pib1);
     printf("Numero de Pontos Turisticos: %d\n", pontos_turisticos1);
     printf("---------------------------\n");
 
-    // --- EXIBIÇÃO DA CARTA 2 ---
+    // --- CARTA 2 ---
     printf("\n--- Dados da CARTA 2 ---\n");
     printf("Estado: %c\n", estado2_char);
     printf("Código: %s\n", codigo_carta2);
     printf("Nome da Cidade: %s\n", nome_cidade2);
     printf("População: %d\n", populacao2);
     printf("Área: %.2f km²\n", area2);
-    printf("PIB: %.2f Bilhoes de unidades monetarias\n", pib2);
+    printf("PIB: %.2f Bilhoes de R$\n", pib2);
     printf("Numero de Pontos Turisticos: %d\n", pontos_turisticos2);
     printf("---------------------------\n");
 
-    return 0; // Indica que o programa terminou com sucesso
+    return 0;
 }

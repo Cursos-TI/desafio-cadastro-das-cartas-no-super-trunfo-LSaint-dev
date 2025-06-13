@@ -1,101 +1,104 @@
-#include <stdio.h> 
-
-// Desafio Super Trunfo - Países - Nível Novato
+#include <stdio.h>
 
 int main() {
-    // --- Variáveis para a carta 1 ---
-    char estado1_char;           // Letra do estado
-    char codigo_carta1[5];       // Código da carta (ex: A01)
-    char nome_cidade1[50];       // Nome da cidade
-    int populacao1;              // População
-    float area1;                 // Área em KM²
-    float pib1;                  // PIB
-    int pontos_turisticos1;      // Número de pontos turísticos
+    // Variáveis para a CARTA 1
+    char estado1;             // Estado da carta
+    char codigoCarta1[5];     // Código da carta
+    char nomeCidade1[50];     // Nome da cidade 
+    int populacao1;           // População da cidade
+    float area1;              // Área da cidade em km²
+    float pib1;               // PIB da cidade
+    int numPontosTuristicos1; // Número de pontos turísticos
 
-    // --- Variáveis para a carta 2 ---
-    char estado2_char;
-    char codigo_carta2[5];
-    char nome_cidade2[50];
+    // Variáveis para a CARTA 2
+    char estado2;
+    char codigoCarta2[5];
+    char nomeCidade2[50];
     int populacao2;
     float area2;
     float pib2;
-    int pontos_turisticos2;
+    int numPontosTuristicos2;
 
-    printf("=======================================\n");
-    printf("  DESAFIO SUPER TRUNFO - PAÍSES\n");
-    printf("        NÍVEL NOVATO\n");
-    printf("=======================================\n");
-    printf("Vamos cadastrar duas cartas de cidades.\n");
+    printf("*****************************************\n");
+    printf("  SUPER TRUNFO DE CIDADES - NÍVEL NOVATO \n");
+    printf("  Vamos cadastrar os dados de duas cartas!\n");
+    printf("*****************************************\n\n");
 
-    // --- CADASTRO DA CARTA 1 ---
-    printf("\n--- Cadastro da CARTA 1 ---\n");
+    // ENTRADA DE DADOS DA CARTA 1
+    printf("INFORME OS DADOS DA CARTA 1\n");
 
-    printf("Digite a letra do estado da cidade (de A a H): ");
-    scanf(" %c", &estado1_char);
+    printf("Estado (uma letra de 'A' a 'H'): ");
+    scanf(" %c", &estado1); // O espaço antes de %c ainda é importante, quebrei muito a cabeça para descobrir isso, o resultado sempre saia errado
 
-    printf("Digite o código da carta (ex: A01): ");
-    scanf(" %s", codigo_carta1); 
+    printf("Código da Carta (ex: A01, B03): ");
+    scanf("%s", codigoCarta1); 
 
-    printf("Digite o nome da cidade: ");
-    scanf(" %s", nome_cidade1); 
+    printf("Nome da Cidade (sem espaços): ");
+    scanf("%s", nomeCidade1);
 
-    printf("Digite a população: ");
+    printf("População: ");
     scanf("%d", &populacao1);
 
-    printf("Digite a área em KM²: ");
+    printf("Área (em km²): ");
     scanf("%f", &area1);
 
-    printf("Digite o PIB em Bilhões: ");
+    printf("PIB (em bilhões de reais): ");
     scanf("%f", &pib1);
 
-    printf("Digite o número de pontos turísticos: ");
-    scanf("%d", &pontos_turisticos1);
+    printf("Número de Pontos Turísticos: ");
+    scanf("%d", &numPontosTuristicos1);
 
-    // --- CADASTRO DA CARTA 2 ---
-    printf("\n--- Cadastro da CARTA 2 ---\n");
+    printf("\n");
 
-    printf("Digite a letra do estado da cidade (de A a H): ");
-    scanf(" %c", &estado2_char); 
+    // ENTRADA DE DADOS DA CARTA 2
+    printf("INFORME OS DADOS DA CARTA 2\n");
 
-    printf("Digite o código da carta (ex: B02): ");
-    scanf(" %s", codigo_carta2); 
+    printf("Estado (uma letra de 'A' a 'H'): ");
+    scanf(" %c", &estado2); 
 
-    printf("Digite o nome da cidade: ");
-    scanf(" %s", nome_cidade2); 
+    printf("Código da Carta (ex: A01, B03): ");
+    scanf("%s", codigoCarta2);
 
-    printf("Digite a população: ");
+    printf("Nome da Cidade (sem espaços, por favor): ");
+    scanf("%s", nomeCidade2);
+
+    printf("População: ");
     scanf("%d", &populacao2);
 
-    printf("Digite a área em KM²: ");
+    printf("Área (em km²): ");
     scanf("%f", &area2);
 
-    printf("Digite o PIB em Bilhões: ");
+    printf("PIB (em bilhões de reais): ");
     scanf("%f", &pib2);
 
-    printf("Digite o número de pontos turísticos: ");
-    scanf("%d", &pontos_turisticos2);
+    printf("Número de Pontos Turísticos: ");
+    scanf("%d", &numPontosTuristicos2);
 
-    // --- CARTA 1 ---
-    printf("\n--- Dados da CARTA 1 ---\n");
-    printf("Estado: %c\n", estado1_char);
-    printf("Código: %s\n", codigo_carta1);
-    printf("Nome da Cidade: %s\n", nome_cidade1);
+    printf("\n*****************************************\n");
+    printf("  DADOS DAS CARTAS CADASTRADAS           \n");
+    printf("*****************************************\n\n");
+
+    // EXIBIÇÃO DE DADOS DA CARTA 1
+    printf("Carta 1:\n");
+    printf("Estado: %c\n", estado1);
+    printf("Código: %s\n", codigoCarta1);
+    printf("Nome da Cidade: %s\n", nomeCidade1);
     printf("População: %d\n", populacao1);
-    printf("Área: %.2f km²\n", area1);
-    printf("PIB: %.2f Bilhoes R$\n", pib1);
-    printf("Numero de Pontos Turisticos: %d\n", pontos_turisticos1);
-    printf("---------------------------\n");
+    printf("Área: %.2f km²\n", area1); 
+    printf("PIB: %.2f bilhões de reais\n", pib1);
+    printf("Número de Pontos Turísticos: %d\n", numPontosTuristicos1);
+    printf("\n"); 
 
-    // --- CARTA 2 ---
-    printf("\n--- Dados da CARTA 2 ---\n");
-    printf("Estado: %c\n", estado2_char);
-    printf("Código: %s\n", codigo_carta2);
-    printf("Nome da Cidade: %s\n", nome_cidade2);
+    // EXIBIÇÃO DE DADOS DA CARTA 2
+    printf("Carta 2:\n");
+    printf("Estado: %c\n", estado2);
+    printf("Código: %s\n", codigoCarta2);
+    printf("Nome da Cidade: %s\n", nomeCidade2);
     printf("População: %d\n", populacao2);
     printf("Área: %.2f km²\n", area2);
-    printf("PIB: %.2f Bilhoes de R$\n", pib2);
-    printf("Numero de Pontos Turisticos: %d\n", pontos_turisticos2);
-    printf("---------------------------\n");
+    printf("PIB: %.2f bilhões de reais\n", pib2);
+    printf("Número de Pontos Turísticos: %d\n", numPontosTuristicos2);
+    printf("\n");
 
-    return 0;
+    return 0
 }
